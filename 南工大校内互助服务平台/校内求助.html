@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="南京工业大学校园互助平台网页"/>
+        <meta name="arthor" content="lyh"/>
+        <meta name="keywords" content="互助"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>闲置二手物品</title>
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/lineicons.css">
+        <link rel="stylesheet" href="static/css/tiny-slider.css">
+        <link rel="stylesheet" href="static/css/animate.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <style>
+            /*搜索见面↓*/
+            .conweb {
+                width: 500px;
+                height: 50px;
+                margin: 100px auto;
+            }
+    
+            .parweb {
+                width: 100%;
+                height: 42;
+                top: 4px;
+                position: relative;
+            }
+    
+            .parweb>input:first-of-type {
+                /*输入框高度设置为40px, border占据2px，总高度为42px*/
+                width: 400px;
+                height: 50px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                outline: none;
+            }
+    
+            .parweb>input:first-of-type:focus {
+                border: 1px solid #5864FF;
+                padding-left: 10px;
+            }
+    
+            .parweb>input:last-of-type {
+                /*button按钮border并不占据外围大小，设置高度42px*/
+                width: 100px;
+                height: 50px;
+                position: absolute;
+                background: #5864FF;
+                border: 1px solid rgba(88, 100, 255, 0.8);
+                color: #fff;
+                font-size: 16px;
+                outline: none;
+            }
+    
+            /*搜索见面↑*/
+        </style>
+    </head>
+
+    <body>
+
+        <div class="preloader">
+            <div class="loader">
+                <div class="spinner">
+                    <div class="spinner-container">
+                        <div class="spinner-rotator">
+                            <div class="spinner-left">
+                                <div class="spinner-circle"></div>
+                            </div>
+                            <div class="spinner-right">
+                                <div class="spinner-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="navbar-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg">
+                                <a class="navbar-brand" href="">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                    <span class="toggler-icon"></span>
+                                </button>
+                                <img src="图标加文字.jpg" width="100px" style="float:right;">
+                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                    <ul id="nav" class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                            <a href="index.html">回到首页</a>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center position-relative">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <h1 class="wow fadeInUp" data-wow-delay=".4s">
+                                校内求助
+                            </h1>
+                            <p class="wow fadeInUp" data-wow-delay=".6s">
+                                工大校内遭遇各种突发状况，通过求助专栏徐速化险为夷。送药外卖代取，生病在寝求送饭，各种突发情况，寻求陌生同学的帮助。
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section pt-120 pb-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-5 col-xl-6 col-lg-8 col-md-9">
+                        <div class="section-title text-center mb-35">
+                            
+                            <h2 class="mb-25 wow fadeInUp" data-wow-delay=".2s">
+                                点击下方的需求
+                            </h2>
+                            <p class="wow fadeInUp" data-wow-delay=".4s">
+                                是需要寻找，还是需要发布？选择自己的需求。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-nav-wrapper mb-60">
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li role="presentation">
+                            <a class="active" id="pills-month-tab" data-bs-toggle="pill" href="#pills-month" role="tab"
+                                aria-controls="pills-month" aria-selected="true">收购页面</a>
+                        </li>
+                        <li role="presentation">
+                            <a id="pills-year-tab" data-bs-toggle="pill" href="#pills-year" role="tab"
+                                aria-controls="pills-year" aria-selected="false">发布页面</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="conweb">
+                    <form action="" class="parweb">
+                        <input type="text" placeholder=" 直接搜索相关内容">
+                        <input type="button" value="搜索">
+                    </form>
+                </div>
+                <hr />
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-month" role="tabpanel"
+                        aria-labelledby="pills-month-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">A</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">B</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">C</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">D</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">E</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">F</h1>
+                                        <h3 class="package-name">商品的名称</h3>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="package-name"></h4>商品的描述：
+                                    </div>
+                                    <div class="content">
+                                        <h3 class="package-name"></h3>联系方式：
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-8 col-sm-10">
+                                <div class="single-pricing">
+                                    <div class="pricing-header">
+                                        <h1 class="price">a</h1>
+                                        <input type="text"placeholder="输入商品的名称"/><br/><br/>
+                                        <input type="text"placeholder="输入商品的价格"/><br/><br/>
+                                        <textarea>在此输入商品的描述并在下方添加相关图片：</textarea><br/><br/>
+                                        <input type="file"/><br/><br/><br/><br/>
+                                        <input type="text"placeholder="联系方式(务必填写)"/><br/><br/>
+                                    </div>
+                                    <div class="content">
+                                    </div>
+                                    <div class="pricing-btn">
+                                        <a href="javascript:void(0)" class="main-btn btn-hover">发布</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+    
+                </div>
+            </div>
+        </section>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div id="bottom">
+            <footer class="footer">
+                <div class="container">
+                    <div class="widget-wrapper">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+
+                                <div class="footer-widget"
+                                    style="background-color: white; border-top-right-radius:30px; border-bottom-left-radius:30px; border-bottom-right-radius:30px;">
+                                    <a style="text-align: right;">
+                                        <img src="图标加文字.jpg" width="200px" alt=""><br><br><br>
+                                    </a>
+                                    <a href="http://www.njtech.edu.cn/">
+                                        <h4 style="text-align: right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            南京工业大学官网地址(点此处)
+                                            <br>http://www.njtech.edu.cn/</h4>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h3>关于网站</h3>
+                                    <ul class="links">
+                                        <li><a href="index.html">主页</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-2 col-lg-2 col-md-6">
+                                <div class="footer-widget">
+                                    <h3>创作者</h3>
+                                    <ul class="links">
+                                        <li><a>南京工业大学</a></li>
+                                        <li><a>lyh</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <a href="#" class="scroll-top btn-hover">
+                <i class="lni lni-chevron-up"></i>
+            </a>
+
+            <script src="static/js/bootstrap.bundle.min.js"></script>
+            <script src="static/js/tiny-slider.js"></script>
+            <script src="static/js/wow.min.js"></script>
+            <script src="static/js/main.js"></script>
+        </div>
+    </body>
+    <script>
+        function clickEffect() {
+          let balls = [];
+          let longPressed = false;
+          let longPress;
+          let multiplier = 0;
+          let width, height;
+          let origin;
+          let normal;
+          let ctx;
+          const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
+          const canvas = document.createElement("canvas");
+          document.body.appendChild(canvas);
+          canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
+          const pointer = document.createElement("span");
+          pointer.classList.add("pointer");
+          document.body.appendChild(pointer);
+         
+          if (canvas.getContext && window.addEventListener) {
+            ctx = canvas.getContext("2d");
+            updateSize();
+            window.addEventListener('resize', updateSize, false);
+            loop();
+            window.addEventListener("mousedown", function(e) {
+              pushBalls(randBetween(10, 20), e.clientX, e.clientY);
+              document.body.classList.add("is-pressed");
+              longPress = setTimeout(function(){
+                document.body.classList.add("is-longpress");
+                longPressed = true;
+              }, 500);
+            }, false);
+            window.addEventListener("mouseup", function(e) {
+              clearInterval(longPress);
+              if (longPressed == true) {
+                document.body.classList.remove("is-longpress");
+                pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
+                longPressed = false;
+              }
+              document.body.classList.remove("is-pressed");
+            }, false);
+            window.addEventListener("mousemove", function(e) {
+              let x = e.clientX;
+              let y = e.clientY;
+              pointer.style.top = y + "px";
+              pointer.style.left = x + "px";
+            }, false);
+          } else {
+            console.log("canvas or addEventListener is unsupported!");
+          }
+         
+         
+          function updateSize() {
+            canvas.width = window.innerWidth * 2;
+            canvas.height = window.innerHeight * 2;
+            canvas.style.width = window.innerWidth + 'px';
+            canvas.style.height = window.innerHeight + 'px';
+            ctx.scale(2, 2);
+            width = (canvas.width = window.innerWidth);
+            height = (canvas.height = window.innerHeight);
+            origin = {
+              x: width / 2,
+              y: height / 2
+            };
+            normal = {
+              x: width / 2,
+              y: height / 2
+            };
+          }
+          class Ball {
+            constructor(x = origin.x, y = origin.y) {
+              this.x = x;
+              this.y = y;
+              this.angle = Math.PI * 2 * Math.random();
+              if (longPressed == true) {
+                this.multiplier = randBetween(14 + multiplier, 15 + multiplier);
+              } else {
+                this.multiplier = randBetween(6, 12);
+              }
+              this.vx = (this.multiplier + Math.random() * 0.5) * Math.cos(this.angle);
+              this.vy = (this.multiplier + Math.random() * 0.5) * Math.sin(this.angle);
+              this.r = randBetween(8, 12) + 3 * Math.random();
+              this.color = colours[Math.floor(Math.random() * colours.length)];
+            }
+            update() {
+              this.x += this.vx - normal.x;
+              this.y += this.vy - normal.y;
+              normal.x = -2 / window.innerWidth * Math.sin(this.angle);
+              normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+              this.r -= 0.3;
+              this.vx *= 0.9;
+              this.vy *= 0.9;
+            }
+          }
+         
+          function pushBalls(count = 1, x = origin.x, y = origin.y) {
+            for (let i = 0; i < count; i++) {
+              balls.push(new Ball(x, y));
+            }
+          }
+         
+          function randBetween(min, max) {
+            return Math.floor(Math.random() * max) + min;
+          }
+         
+          function loop() {
+            ctx.fillStyle = "rgba(255, 255, 255, 0)";
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < balls.length; i++) {
+              let b = balls[i];
+              if (b.r < 0) continue;
+              ctx.fillStyle = b.color;
+              ctx.beginPath();
+              ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2, false);
+              ctx.fill();
+              b.update();
+            }
+            if (longPressed == true) {
+              multiplier += 0.2;
+            } else if (!longPressed && multiplier >= 0) {
+              multiplier -= 0.4;
+            }
+            removeBall();
+            requestAnimationFrame(loop);
+          }
+         
+          function removeBall() {
+            for (let i = 0; i < balls.length; i++) {
+              let b = balls[i];
+              if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+                balls.splice(i, 1);
+              }
+            }
+          }
+        }
+        clickEffect();//调用特效函数
+        </script>
+
+</html>

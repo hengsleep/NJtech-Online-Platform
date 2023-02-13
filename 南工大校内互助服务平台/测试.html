@@ -1,0 +1,81 @@
+<style>
+    button,
+    input {
+        border: 0;
+        outline: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .mi {
+        position: absolute;
+        left: 346px;
+        top: 25px;
+        width: 538px;
+        height: 36px;
+        border: 2px solid #5864FF;
+    }
+
+    .mi button {
+        float: left;
+        width: 80px;
+        height: 33px;
+        background-color: #5864FF;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .mi input {
+        float: left;
+        width: 454px;
+        height: 33px;
+        padding-left: 10px;
+        padding: 0 10px;
+        font-size: 14px;
+        line-height: 48px;
+        border: 1px solid #e0e0e0;
+        outline: none;
+        transition: all 0.3s;
+    }
+
+    .mi .search {
+        border: 1px solid #5864FF;
+    }
+
+    .result-list {
+        display: none;
+        left: 0;
+        top: 48px;
+        width: 454px;
+        border: 1px solid #5864FF;
+        border-top: 0;
+        background: #fff;
+    }
+
+    .result-list a {
+        display: block;
+        padding: 6px 15px;
+        font-size: 12px;
+        color: #424242;
+        text-decoration: none;
+    }
+
+    .result-list a:hover {
+        background-color: #eee;
+    }
+</style>
+
+<body>
+    <div class="mi">
+        <input type="search" placeholder="请输入要的搜索商品">
+        <button type="button">搜索</button>
+    </div>
+</body>
